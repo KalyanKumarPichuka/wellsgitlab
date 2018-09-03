@@ -1,0 +1,87 @@
+admin@localhost ~]$ whoamii
+bash: whoamii: command not found...
+Similar command is: 'whoami'
+[admin@localhost ~]$ whoami
+admin
+[admin@localhost ~]$ git config --global user.name "centos"
+[admin@localhost ~]$ git cinfig --global user.email "centos@gmail.com"
+git: 'cinfig' is not a git command. See 'git --help'.
+
+Did you mean this?
+	config
+[admin@localhost ~]$ git config --global user.email "centos@gmail.com"
+[admin@localhost ~]$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/admin/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/admin/.ssh/id_rsa.
+Your public key has been saved in /home/admin/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:cOykhCioXP7uBa7UGkOjyLQRwEwoz/jHo5f3vmAhG1Y admin@localhost.localdomain
+The key's randomart image is:
++---[RSA 2048]----+
+|*.               |
+|=o . . .         |
+|+=... E +        |
+|+.*  o *         |
+|.= =+.o S        |
+|+ *.O+..         |
+|.+ *.*o.         |
+|  o O.o.         |
+|   +.+ o+.       |
++----[SHA256]-----+
+[admin@localhost ~]$ cat /home/admin/.ssh/id_rsa.pub.
+cat: /home/admin/.ssh/id_rsa.pub.: No such file or directory
+[admin@localhost ~]$ cat /home/admin/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXKA5yYx4trgrY1bve4cSdmVnl9W7Uvl7LAlNGxV9AVNP1OHaCpwluaKwsz5j+QDjKzwf+MI/HhETvH0VreSKSl/tHJaP9aqsildwnE8gO9SVIGGJL9kZLZwPDucaUekzNyG9+/c5HMK3RH0TNuhaLSomvsTpBqhG59oDSlidZt1M7OnSJy0D8+Od/120WqP9xTTN+5sxlOt5dsvF4JyIXTsBPzermby1AREGe/h2R3VLT4o3x0jUz2u8ZkGbwBpAgo+JXsWRNp8JXUvREOL96t4hAkqNVQkRR3+8dqgx2I1xLxpKDX9FH2RCX/TN0AxURISOpnSMQwxMYS3pjnYbt admin@localhost.localdomain
+[admin@localhost ~]$ git clone git@github.com:kalyan369/wellsgitlab.git
+Cloning into 'wellsgitlab'...
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+RSA key fingerprint is MD5:16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+[admin@localhost ~]$ ls -lrt
+total 0
+drwxr-xr-x. 2 admin admin  6 Aug 31 16:53 Templates
+drwxr-xr-x. 2 admin admin  6 Aug 31 16:53 Public
+drwxr-xr-x. 2 admin admin  6 Aug 31 16:53 Downloads
+drwxr-xr-x. 2 admin admin  6 Aug 31 16:53 Desktop
+drwxr-xr-x. 2 admin admin  6 Aug 31 16:53 Videos
+drwxr-xr-x. 2 admin admin  6 Aug 31 16:53 Music
+drwxr-xr-x. 2 admin admin  6 Aug 31 16:53 Documents
+drwxr-xr-x. 3 root  root  35 Sep  3 12:26 git
+drwxr-xr-x. 2 admin admin 53 Sep  3 12:30 Pictures
+drwxrwxr-x. 3 admin admin 64 Sep  3 13:43 wellsgitlab
+[admin@localhost ~]$ cd wellsgitlab/
+[admin@localhost wellsgitlab]$ ls -lrt
+total 16
+-rw-rw-r--. 1 admin admin    14 Sep  3 13:43 README.md
+-rw-rw-r--. 1 admin admin 10400 Sep  3 13:43 devops_git_commands_A
+[admin@localhost wellsgitlab]$ gedit README.md
+[admin@localhost wellsgitlab]$ git add .
+[admin@localhost wellsgitlab]$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   README.md
+#
+[admin@localhost wellsgitlab]$ git commit -m "updated readme.md file"
+[master ecaabaa] updated readme.md file
+ 1 file changed, 2 insertions(+)
+[admin@localhost wellsgitlab]$ git push -u origin master
+Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+Counting objects: 5, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 330 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:kalyan369/wellsgitlab.git
+   a8ba0d0..ecaabaa  master -> master
+Branch master set up to track remote branch master from origin.
+[admin@localhost wellsgitlab]$ 
