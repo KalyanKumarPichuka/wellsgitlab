@@ -201,3 +201,19 @@ To git@github.com:kalyan369/wellsgitlab.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 [root@localhost git]# 
+[root@localhost git]# git pull origin master
+remote: Counting objects: 9, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 9 (delta 1), reused 2 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+From github.com:kalyan369/wellsgitlab
+ * branch            master     -> FETCH_HEAD
+Updating 295d613..857c978
+Fast-forward
+ README.md             |   2 +
+ devops_git_commands_A | 203 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ devops_git_commands_B |  87 +++++++++++++++++++++++++++++++++++
+ 3 files changed, 292 insertions(+)
+ create mode 100644 devops_git_commands_A
+ create mode 100644 devops_git_commands_B
+[root@localhost git]# 
