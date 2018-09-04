@@ -169,4 +169,304 @@ drwxr-xr-x. 2 jenkins jenkins   67 Sep  4 09:58 updates
   <globalNodeProperties/>
 </hudson>[root@localhost jenkins]# cat /var/lib/jenkins/secrets/initialAdminPassword
 090381f336874597b492f15c6e724aed
-[root@localhost jenkins]# 
+[root@localhost jenkins]# gedit /etc/passwd
+
+(gedit:9563): GLib-GIO-CRITICAL **: g_dbus_proxy_new_sync: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(gedit:9563): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:9563): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+Error creating proxy: The connection is closed (g-io-error-quark, 18)
+
+(gedit:9563): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:9563): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+(gedit:9563): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+
+** (gedit:9563): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-spell-language not supported
+
+** (gedit:9563): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-encoding not supported
+
+** (gedit:9563): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-spell-language not supported
+
+** (gedit:9563): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-encoding not supported
+
+** (gedit:9563): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-position not supported
+
+(gedit:9563): dconf-WARNING **: failed to commit changes to dconf: The connection is closed
+[root@localhost jenkins]# su jenkins
+bash-4.2$ whoami
+jenkins
+bash-4.2$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/var/lib/jenkins/.ssh/id_rsa): 
+Created directory '/var/lib/jenkins/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /var/lib/jenkins/.ssh/id_rsa.
+Your public key has been saved in /var/lib/jenkins/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:rtnHipAvcaUqSamG4hkkeTmWtm746imNpBic4VxmnLI jenkins@localhost.localdomain
+The key's randomart image is:
++---[RSA 2048]----+
+|                 |
+|                 |
+|  . .            |
+| + O    .        |
+|*./.   oS        |
+|+Eoo..o.         |
+|=O..o+  ..       |
+|XoO oo =  o      |
+|BOo. .= oo       |
++----[SHA256]-----+
+bash-4.2$ cat /var/lib/jenkins/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCjSmqkpzlRUi+soxSD/wHHnr5ZXKqi7ZyyiZLyYte1B4bKwpSyZjgh1QEUpCti6ulckGDJbLVL9EQhTW13uICNUCYOZX1t/QqokKMAjvNGPs18zAdlHd/5vtTD2jKeX3EOwCYjLX9Xm39urtz1IOxbptgqbX9kbwL1AbxKtJxqqcqePQh140ez3fXISlV8uMAfp+DcjQAKxzLpVhJbnQvZnQURBF7luNQlk42YN0Z3uEZpPmnbcGpmgXHKd+S8GVOY2zazAhl5/DPgCsYUD7orjj41EoMkLG51e20inlUGAEoC0XAx0jgdCvhx8pGZJ636N+9bxXdk6+bwvxAgTkYz jenkins@localhost.localdomain
+bash-4.2$ cat /var/lib/jenkins/.ssh/id_rsa
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAo0pqpKc5UVIvrKMUg/8Bx56+WVyqou2csomS8mLXtQeGysKU
+smY4IdUBFKQrYurpXJBgyWy1S/REIU1td7iAjVAmDmV9bf0KqJCjAI7zRj7NfMwH
+ZR3f+b7Uw9oynl9xDsAmIy1/V5t/bq7c9SDsW6bYKm1/ZG8C9QG8SrScaqnKnj0I
+deNHs931yEpVfLjAH6fg3I0ACscy6VYSW50L2Z0FEQRe5bjUJZONmDdGd7hGaT5p
+23BqZoFxynfkvBlTmNs2swIZefwz4ArGFA+6K44+NRKDJCxudXttIp5VBgBKAtFw
+MdI4HQr4cfKRmSet+jfvW8V3ZOvm8L8QIE5GMwIDAQABAoIBABz+mMMV4mqbMlXw
+OzNY84LzoA8UEkSN9pYJMauSe4TsijW0qVyoI+11+hQlNoMA/WDvThBWGjcbb4GO
+UxLAEyuEgM1rngMKvHrD+/2cZHwjqK8xN1rwHBYnmXYRZ42Rmuyol90FNihjNxR7
+PkbUisOXc6jM+qLlx1uj7EBDo8aYiQGKNoMwitcBdkc5KAjMLpDU0enPolX6vFYf
+HOXq02E9FXA7eB+lgT6UQb33y4bdcMNx/NAwtgLBjVfDZ/AmffrtL3o6xXpzQ4a3
+gm1PU/IotAHI4LlI3e+LEDINigCsEwmYca2sr7yxT35lS8x7aqccAou32B7+hu3l
+oNK7iwECgYEAzvby76+u0O4k8gjfnoex3OQRO6Akg/wFdtH7+jo8cA6gIb58NWWq
+LJ+9OF8a9uoZiz7+wI1bWT9/PqUNOqH3Lhib54Lj/MmjumBtMK7IXUVam8u1c3tz
+BzAgAVfFv5myRx87SSSVTaBinT9XS5jzT44kn7Sg1AGhDtSKFqKvy4ECgYEAyfqB
+jfmXybIdehYPgILZMCmKfFkrp5oNNKXUCH0TDme9tuv/XaKD+fNQcO/G20ZpINLw
+4MKTjj/PlBDgFB/Bb9kCQPe1DV9wkFVrzBEM/pRlWRnRgvkjivGm1rQ3ETpHHCxC
+jRRbh3vonFIRxtSkZ969luQX3EfB8oV7HOace7MCgYBlhQbngYK744Tl4GpoZeFe
+G9VELSqcPzwi65+xP22z/ciYpMpimurdlsGHbEdaxLwg7JajtvMPFTGCdg3GK/qG
+dvXKmw7gSbxxSKlmzuVjswheEY+BBRYIeZfJcNeEQ40KjAxVtYczG7AjuBVG9NCs
+vmnCmSSmueHZ13Gg5s5agQKBgFWHZuUgFE6sxh60yMu6nQ3wCVyuxfWrHnx03Fzb
+2f33oDadqP2VnB10E1Q/tQ2Vu17S9H2455MNInGo07qx18/tLS8ltd171MbJ5WP8
+tGv5mxEoBbhYl9x2iBfTKJ569zHO7D+hp0CwD8hiWHTCBvyVLeN/ozr8h/yS2Zdb
+cFhRAoGAI9zhTkQZNWImCwaZ06bai2KH+RxDqGKD4jN1SJQnmUUYZMBINLfQ3/q3
+6oXIzTVU/5JKolnyXRmi7pU6gQK7nElIuJdX3/zdxjSPOWnSBo7Vxsbn4a89dOEo
+yQIHrEa+tZMPkxlGJZUcGRC7ZEpfyVlhrPAgLpR6SPxChWPF3yA=
+-----END RSA PRIVATE KEY-----
+bash-4.2$ ls -lrt
+total 152
+-rw-r--r--.  1 jenkins jenkins   64 Sep  4 09:57 secret.key
+-rw-r--r--.  1 jenkins jenkins    0 Sep  4 09:57 secret.key.not-so-secret
+-rw-------.  1 jenkins jenkins 1712 Sep  4 09:58 identity.key.enc
+drwxr-xr-x.  2 jenkins jenkins    6 Sep  4 09:58 nodes
+drwxr-xr-x.  3 jenkins jenkins   19 Sep  4 09:58 logs
+drwxr-xr-x.  2 jenkins jenkins   24 Sep  4 09:58 userContent
+-rw-r--r--.  1 jenkins jenkins   94 Sep  4 09:58 jenkins.CLI.xml
+drwxr-xr-x.  2 jenkins jenkins  182 Sep  4 10:07 updates
+drwxr-xr-x.  2 jenkins jenkins    6 Sep  4 10:08 workflow-libs
+drwxr-xr-x.  3 jenkins jenkins   19 Sep  4 10:38 users
+-rw-r--r--.  1 jenkins jenkins    5 Sep  4 10:38 jenkins.install.InstallUtil.lastExecVersion
+-rw-r--r--.  1 jenkins jenkins    5 Sep  4 10:38 jenkins.install.UpgradeWizard.state
+-rw-r--r--.  1 jenkins jenkins  247 Sep  4 10:55 jenkins.mvn.GlobalMavenConfig.xml
+-rw-r--r--.  1 jenkins jenkins  370 Sep  4 10:55 hudson.plugins.git.GitTool.xml
+-rw-r--r--.  1 jenkins jenkins  255 Sep  4 10:55 org.jenkinsci.plugins.gitclient.JGitApacheTool.xml
+-rw-r--r--.  1 jenkins jenkins  243 Sep  4 10:55 org.jenkinsci.plugins.gitclient.JGitTool.xml
+-rw-r--r--.  1 jenkins jenkins  173 Sep  4 10:55 hudson.plugins.gradle.Gradle.xml
+-rw-r--r--.  1 jenkins jenkins  145 Sep  4 10:55 hudson.tasks.Ant.xml
+-rw-r--r--.  1 jenkins jenkins  986 Sep  4 10:55 hudson.tasks.Maven.xml
+-rw-r--r--.  1 jenkins jenkins  299 Sep  4 10:55 org.jenkinsci.plugins.docker.commons.tools.DockerTool.xml
+-rw-r--r--.  1 jenkins jenkins  369 Sep  4 10:56 scriptApproval.xml
+-rw-r--r--.  1 jenkins jenkins  153 Sep  4 10:56 org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml
+-rw-r--r--.  1 jenkins jenkins  347 Sep  4 10:56 hudson.plugins.timestamper.TimestamperConfig.xml
+-rw-r--r--.  1 jenkins jenkins  159 Sep  4 10:56 jenkins.model.ArtifactManagerConfiguration.xml
+-rw-r--r--.  1 jenkins jenkins  260 Sep  4 10:56 jenkins.model.JenkinsLocationConfiguration.xml
+-rw-r--r--.  1 jenkins jenkins  214 Sep  4 10:56 github-plugin-configuration.xml
+-rw-r--r--.  1 jenkins jenkins  291 Sep  4 10:56 org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml
+-rw-r--r--.  1 jenkins jenkins  219 Sep  4 10:56 org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml
+-rw-r--r--.  1 jenkins jenkins  250 Sep  4 10:56 hudson.plugins.build_timeout.operations.BuildStepOperation.xml
+-rw-r--r--.  1 jenkins jenkins  320 Sep  4 10:56 hudson.plugins.git.GitSCM.xml
+-rw-r--r--.  1 jenkins jenkins  391 Sep  4 10:56 hudson.scm.SubversionSCM.xml
+-rw-r--r--.  1 jenkins jenkins   76 Sep  4 10:56 hudson.tasks.Shell.xml
+-rw-r--r--.  1 jenkins jenkins 1316 Sep  4 10:56 hudson.plugins.emailext.ExtendedEmailPublisher.xml
+-rw-r--r--.  1 jenkins jenkins  188 Sep  4 10:56 hudson.tasks.Mailer.xml
+-rw-r--r--.  1 jenkins jenkins  216 Sep  4 10:56 hudson.triggers.SCMTrigger.xml
+-rw-r--r--.  1 jenkins jenkins 3375 Sep  4 11:24 credentials.xml
+drwxr-xr-x. 76 jenkins jenkins 8192 Sep  4 11:29 plugins
+-rw-r--r--.  1 jenkins jenkins  129 Sep  4 11:29 queue.xml.bak
+-rw-r--r--.  1 jenkins jenkins  156 Sep  4 11:30 hudson.model.UpdateCenter.xml
+-rw-r--r--.  1 jenkins jenkins  907 Sep  4 11:30 nodeMonitors.xml
+-rw-r--r--.  1 jenkins jenkins 2557 Sep  4 11:30 config.xml
+drwxr-xr-x.  3 jenkins jenkins   18 Sep  4 11:35 jobs
+drwxr-xr-x.  3 jenkins jenkins   18 Sep  4 11:52 cache
+drwxr-xr-x.  3 jenkins jenkins   16 Sep  4 11:52 fingerprints
+drwxr-xr-x.  4 jenkins jenkins   34 Sep  4 11:52 workspace
+drwx------.  4 jenkins jenkins 4096 Sep  4 11:52 secrets
+drwxr-xr-x.  4 jenkins jenkins   74 Sep  4 11:52 tools
+-rw-r--r--.  1 jenkins jenkins  129 Sep  4 11:53 queue.xml
+bash-4.2$ cd workspace
+bash-4.2$ ls -lrt
+total 0
+drwxr-xr-x. 2 jenkins jenkins   6 Sep  4 11:52 test@tmp
+drwxr-xr-x. 8 jenkins jenkins 185 Sep  4 11:52 test
+bash-4.2$ cd test
+bash-4.2$ ls -lrt
+total 24
+-rw-r--r--. 1 jenkins jenkins  1190 Sep  4 11:52 README.md
+-rw-r--r--. 1 jenkins jenkins 11360 Sep  4 11:52 LICENSE
+-rw-r--r--. 1 jenkins jenkins  1251 Sep  4 11:52 Jenkinsfile
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 11:52 auth-service
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 11:52 common-lib
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 11:52 product-service
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 11:52 discovery-server
+-rw-r--r--. 1 jenkins jenkins     5 Sep  4 11:52 test
+drwxr-xr-x. 4 jenkins jenkins    46 Sep  4 11:55 api-gateway
+bash-4.2$ cd api-gateway/
+bash-4.2$ ls -lrt
+total 4
+-rw-r--r--. 1 jenkins jenkins 2722 Sep  4 11:52 pom.xml
+drwxr-xr-x. 4 jenkins jenkins   30 Sep  4 11:52 src
+drwxr-xr-x. 9 jenkins jenkins  247 Sep  4 11:56 target
+bash-4.2$ cd target
+bash-4.2$ ls -lrt
+total 45424
+drwxr-xr-x. 3 jenkins jenkins       35 Sep  4 11:55 maven-status
+drwxr-xr-x. 3 jenkins jenkins       25 Sep  4 11:55 generated-sources
+drwxr-xr-x. 3 jenkins jenkins       40 Sep  4 11:55 classes
+drwxr-xr-x. 3 jenkins jenkins       30 Sep  4 11:55 generated-test-sources
+drwxr-xr-x. 3 jenkins jenkins       17 Sep  4 11:55 test-classes
+drwxr-xr-x. 2 jenkins jenkins       91 Sep  4 11:55 surefire-reports
+drwxr-xr-x. 2 jenkins jenkins       28 Sep  4 11:55 maven-archiver
+-rw-r--r--. 1 jenkins jenkins     3654 Sep  4 11:55 api-gateway-0.0.1-SNAPSHOT.jar.original
+-rw-r--r--. 1 jenkins jenkins 46508054 Sep  4 11:56 api-gateway-0.0.1-SNAPSHOT.jar
+bash-4.2$ cd ..
+bash-4.2$ cd ..
+bash-4.2$ pwd
+/var/lib/jenkins/workspace/test
+bash-4.2$ cd ../..
+bash-4.2$ cd jobs
+bash-4.2$ ls -lrt
+total 0
+drwxr-xr-x. 3 jenkins jenkins 101 Sep  4 11:52 test
+bash-4.2$ cd test
+bash-4.2$ ls -lrt
+total 8
+-rw-r--r--. 1 jenkins jenkins 1860 Sep  4 11:52 config.xml
+-rw-r--r--. 1 jenkins jenkins    2 Sep  4 11:52 nextBuildNumber
+lrwxrwxrwx. 1 jenkins jenkins   26 Sep  4 11:52 lastSuccessful -> builds/lastSuccessfulBuild
+lrwxrwxrwx. 1 jenkins jenkins   22 Sep  4 11:52 lastStable -> builds/lastStableBuild
+drwxr-xr-x. 3 jenkins jenkins  159 Sep  4 11:56 builds
+bash-4.2$ cd builds/
+bash-4.2$ ls -lrt
+total 0
+-rw-r--r--. 1 jenkins jenkins  0 Sep  4 11:35 legacyIds
+lrwxrwxrwx. 1 jenkins jenkins  2 Sep  4 11:52 lastFailedBuild -> -1
+lrwxrwxrwx. 1 jenkins jenkins  2 Sep  4 11:52 lastUnstableBuild -> -1
+lrwxrwxrwx. 1 jenkins jenkins  2 Sep  4 11:52 lastUnsuccessfulBuild -> -1
+lrwxrwxrwx. 1 jenkins jenkins  1 Sep  4 11:56 lastSuccessfulBuild -> 1
+lrwxrwxrwx. 1 jenkins jenkins  1 Sep  4 11:56 lastStableBuild -> 1
+drwxr-xr-x. 2 jenkins jenkins 55 Sep  4 11:56 1
+bash-4.2$ pwd
+/var/lib/jenkins/jobs/test/builds
+bash-4.2$ cd ../../../workspace/
+bash-4.2$ ls
+test  testbuild  test build  test@tmp
+bash-4.2$ cd testbuild/
+bash-4.2$ ls
+bash-4.2$ ls -lrt
+total 24
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 auth-service
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 common-lib
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 discovery-server
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 product-service
+-rw-r--r--. 1 jenkins jenkins 11360 Sep  4 13:28 LICENSE
+-rw-r--r--. 1 jenkins jenkins  1251 Sep  4 13:28 Jenkinsfile
+-rw-r--r--. 1 jenkins jenkins     5 Sep  4 13:28 test
+-rw-r--r--. 1 jenkins jenkins  1190 Sep  4 13:28 README.md
+drwxr-xr-x. 4 jenkins jenkins    46 Sep  4 13:29 api-gateway
+bash-4.2$ cd api-gateway
+bash-4.2$ ls -lrt
+total 4
+drwxr-xr-x. 4 jenkins jenkins   30 Sep  4 13:28 src
+-rw-r--r--. 1 jenkins jenkins 2722 Sep  4 13:28 pom.xml
+drwxr-xr-x. 9 jenkins jenkins  247 Sep  4 13:29 target
+bash-4.2$ cd target/
+bash-4.2$ ls -lrt
+total 45424
+drwxr-xr-x. 3 jenkins jenkins       35 Sep  4 13:29 maven-status
+drwxr-xr-x. 3 jenkins jenkins       25 Sep  4 13:29 generated-sources
+drwxr-xr-x. 3 jenkins jenkins       40 Sep  4 13:29 classes
+drwxr-xr-x. 3 jenkins jenkins       30 Sep  4 13:29 generated-test-sources
+drwxr-xr-x. 3 jenkins jenkins       17 Sep  4 13:29 test-classes
+drwxr-xr-x. 2 jenkins jenkins       91 Sep  4 13:29 surefire-reports
+drwxr-xr-x. 2 jenkins jenkins       28 Sep  4 13:29 maven-archiver
+-rw-r--r--. 1 jenkins jenkins     3655 Sep  4 13:29 api-gateway-0.0.1-SNAPSHOT.jar.original
+-rw-r--r--. 1 jenkins jenkins 46508055 Sep  4 13:29 api-gateway-0.0.1-SNAPSHOT.jar
+bash-4.2$ cd /var/lib/jenkins/workspace/testbuild/
+bash-4.2$ ls -lrt
+total 24
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 auth-service
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 common-lib
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 discovery-server
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 product-service
+-rw-r--r--. 1 jenkins jenkins 11360 Sep  4 13:28 LICENSE
+-rw-r--r--. 1 jenkins jenkins  1251 Sep  4 13:28 Jenkinsfile
+-rw-r--r--. 1 jenkins jenkins     5 Sep  4 13:28 test
+-rw-r--r--. 1 jenkins jenkins  1190 Sep  4 13:28 README.md
+drwxr-xr-x. 4 jenkins jenkins    46 Sep  4 13:29 api-gateway
+bash-4.2$ ls -lrt
+total 24
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 auth-service
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 common-lib
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 discovery-server
+drwxr-xr-x. 3 jenkins jenkins    32 Sep  4 13:28 product-service
+-rw-r--r--. 1 jenkins jenkins 11360 Sep  4 13:28 LICENSE
+-rw-r--r--. 1 jenkins jenkins  1251 Sep  4 13:28 Jenkinsfile
+-rw-r--r--. 1 jenkins jenkins     5 Sep  4 13:28 test
+-rw-r--r--. 1 jenkins jenkins  1190 Sep  4 13:28 README.md
+drwxr-xr-x. 4 jenkins jenkins    46 Sep  4 13:29 api-gateway
+bash-4.2$ pwd
+/var/lib/jenkins/workspace/testbuild
+bash-4.2$ cd /var/lib/jenkins/jobs/testbuild/
+bash-4.2$ ls -lrt
+total 12
+-rw-r--r--. 1 jenkins jenkins   76 Sep  4 13:11 scm-polling.log
+-rw-r--r--. 1 jenkins jenkins 1656 Sep  4 13:28 config.xml
+-rw-r--r--. 1 jenkins jenkins    2 Sep  4 13:29 nextBuildNumber
+lrwxrwxrwx. 1 jenkins jenkins   26 Sep  4 13:29 lastSuccessful -> builds/lastSuccessfulBuild
+lrwxrwxrwx. 1 jenkins jenkins   22 Sep  4 13:29 lastStable -> builds/lastStableBuild
+drwxr-xr-x. 5 jenkins jenkins  177 Sep  4 13:29 builds
+bash-4.2$ cd builds
+bash-4.2$ ls -lrt
+total 0
+-rw-r--r--. 1 jenkins jenkins  0 Sep  4 13:09 legacyIds
+lrwxrwxrwx. 1 jenkins jenkins  2 Sep  4 13:12 lastUnstableBuild -> -1
+drwxr-xr-x. 2 jenkins jenkins 55 Sep  4 13:25 1
+lrwxrwxrwx. 1 jenkins jenkins  1 Sep  4 13:27 lastUnsuccessfulBuild -> 2
+lrwxrwxrwx. 1 jenkins jenkins  1 Sep  4 13:27 lastFailedBuild -> 2
+drwxr-xr-x. 2 jenkins jenkins 55 Sep  4 13:27 2
+lrwxrwxrwx. 1 jenkins jenkins  1 Sep  4 13:29 lastStableBuild -> 3
+lrwxrwxrwx. 1 jenkins jenkins  1 Sep  4 13:29 lastSuccessfulBuild -> 3
+drwxr-xr-x. 3 jenkins jenkins 70 Sep  4 13:29 3
+bash-4.2$ cd 3
+bash-4.2$ ls -lrt
+total 16
+-rw-r--r--. 1 jenkins jenkins    6 Sep  4 13:29 changelog.xml
+drwxr-xr-x. 3 jenkins jenkins   25 Sep  4 13:29 archive
+-rw-r--r--. 1 jenkins jenkins 5864 Sep  4 13:29 log
+-rw-r--r--. 1 jenkins jenkins 1146 Sep  4 13:29 build.xml
+bash-4.2$ cd archive
+bash-4.2$ ls -lrt
+total 0
+drwxr-xr-x. 3 jenkins jenkins 20 Sep  4 13:29 api-gateway
+bash-4.2$ cd api-gateway/
+bash-4.2$ ls -lrt
+total 0
+drwxr-xr-x. 2 jenkins jenkins 44 Sep  4 13:29 target
+bash-4.2$ 
+bash-4.2$ cd target/
+bash-4.2$ ls -lrt
+total 45420
+-rw-r--r--. 1 jenkins jenkins 46508055 Sep  4 13:29 api-gateway-0.0.1-SNAPSHOT.jar
+bash-4.2$ 
+
