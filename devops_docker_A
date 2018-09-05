@@ -832,3 +832,46 @@ apache              latest              b6e4e4f49dac        47 seconds ago      
 docker.io/ubuntu    16.04               52b10959e8aa        12 days ago         115 MB
 docker.io/ubuntu    latest              16508e5c265d        12 days ago         84.1 MB
 [root@localhost docker]# 
+
+
+################################################WINDOW-1#############################################################################
+
+[admin@localhost ~]$ su
+Password: 
+[root@localhost admin]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+010a44426f51        apache              "/bin/sh -c /root/..."   2 minutes ago       Up 2 minutes        0.0.0.0:80->80/tcp   cocky_stallman
+[root@localhost admin]# docker stop 010a44426f51
+010a44426f51
+[root@localhost admin]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+b3458f616ea2        apache              "/bin/sh -c /root/..."   9 seconds ago       Up 8 seconds        0.0.0.0:80->80/tcp   elegant_einstein
+[root@localhost admin]# 
+
+###################################################WINDOW-2##########################################################################
+
+[admin@localhost ~]$ su
+Password: 
+[root@localhost admin]# docker run -p 80:80 apache
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
+[root@localhost admin]# docker run -d -p 80:80 apache
+b3458f616ea2653b7bd36ab5dc63055f3ca7161ae66f0a5b4fcea6d8c9ccea3f
+[root@localhost admin]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+b3458f616ea2        apache              "/bin/sh -c /root/..."   35 seconds ago      Up 34 seconds       0.0.0.0:80->80/tcp   elegant_einstein
+[root@localhost admin]# docker exec -it b3458f616ea2 bash
+root@b3458f616ea2:/# cd /var/www/html/
+root@b3458f616ea2:/var/www/html# ls 
+index.html
+root@b3458f616ea2:/var/www/html# echo " i am testing docker" > index.html
+root@b3458f616ea2:/var/www/html# exit
+exit
+[root@localhost admin]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+b3458f616ea2        apache              "/bin/sh -c /root/..."   6 minutes ago       Up 6 minutes        0.0.0.0:80->80/tcp   elegant_einstein
+[root@localhost admin]# docker stop b3458f616ea2
+b3458f616ea2
+[root@localhost admin]# docker run -d -p 80:80 apache
+af777d50c2c427262d8608b630c1cc79350da127a346866558d3c0423c425346
+[root@localhost admin]# 
+###########################################################################################################################
